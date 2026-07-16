@@ -1,0 +1,33 @@
+:root { --ink:#12213a; --accent:#175cd3; --paper:#f4f7fb; --danger:#b42318; --ok:#067647; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--paper); color:var(--ink); }
+header { position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:18px max(5vw,20px); background:#fff; border-bottom:1px solid #dce3ec; box-shadow:0 3px 12px rgba(15,23,42,.06); }
+h1 { margin:3px 0; font-size:clamp(1.35rem,3vw,2.2rem); }
+header p { margin:0; }
+.eyebrow { color:var(--accent); font-weight:800; letter-spacing:.12em; }
+.timer { min-width:110px; text-align:center; font-size:1.7rem; font-weight:800; background:#eef4ff; border:2px solid #b2ccff; border-radius:12px; padding:10px; }
+main { width:min(980px,92vw); margin:28px auto 70px; }
+.panel, .question { position:relative; background:#fff; border:1px solid #dce3ec; border-radius:16px; padding:22px; margin-bottom:18px; box-shadow:0 5px 18px rgba(15,23,42,.05); overflow:hidden; }
+.start-panel { text-align:center; padding:36px; }
+.form-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; text-align:left; margin:25px 0; }
+label { font-weight:700; }
+input { width:100%; margin-top:7px; padding:12px; border:1px solid #b8c3d1; border-radius:9px; font-size:1rem; }
+button { border:0; border-radius:10px; padding:12px 20px; font-weight:800; cursor:pointer; font-size:1rem; }
+.primary { background:var(--accent); color:#fff; }
+.danger { background:var(--danger); color:#fff; }
+.exam-toolbar { display:flex; justify-content:space-between; align-items:center; position:sticky; top:108px; z-index:8; }
+.question h3 { margin-top:0; line-height:1.45; }
+.option { display:block; border:1px solid #d7dee8; border-radius:10px; padding:12px; margin:9px 0; cursor:pointer; font-weight:normal; }
+.option:hover { background:#f7f9fc; }
+.option input { width:auto; margin:0 10px 0 0; }
+.math { font-family:"Times New Roman",serif; font-size:1.08em; }
+.graph { display:block; width:min(420px,100%); margin:14px auto; border:1px solid #d8dee8; background:#fff; }
+.hidden { display:none !important; }
+.score-box { font-size:1.4rem; font-weight:800; padding:16px; background:#eef4ff; border-radius:12px; margin:15px 0; }
+.review-item { border-left:6px solid #98a2b3; padding:14px 16px; margin:12px 0; background:#f8fafc; border-radius:8px; }
+.review-item.correct { border-left-color:var(--ok); background:#ecfdf3; }
+.review-item.wrong { border-left-color:var(--danger); background:#fef3f2; }
+.watermark { position:fixed; inset:48% auto auto 50%; transform:translate(-50%,-50%) rotate(-28deg); font-size:clamp(2rem,6vw,5rem); color:rgba(23,92,211,.045); white-space:nowrap; pointer-events:none; z-index:0; font-weight:900; }
+.question::after { content:"Eng. Abdelrahman Ghoneem · 01116004434"; position:absolute; right:14px; bottom:8px; color:rgba(18,33,58,.16); font-size:.72rem; }
+footer { text-align:center; padding:25px; background:#fff; border-top:1px solid #dce3ec; }
+@media (max-width:720px){ .form-grid{grid-template-columns:1fr;} header{align-items:flex-start;gap:10px}.timer{font-size:1.25rem;min-width:85px}.exam-toolbar{top:126px}.panel,.question{padding:17px} }

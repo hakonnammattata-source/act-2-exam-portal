@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACT 2 Mathematics Portal | Eng. Abdelrahman Ghoneem</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="watermark" aria-hidden="true">Eng. Abdelrahman Ghoneem · 01116004434</div>
+  <header>
+    <div>
+      <p class="eyebrow">ACT 2 MATHEMATICS</p>
+      <h1>Online Examination Portal</h1>
+      <p>Eng. Abdelrahman Ghoneem · 01116004434</p>
+    </div>
+    <div id="timer" class="timer">60:00</div>
+  </header>
+
+  <main>
+    <section id="startPanel" class="panel start-panel">
+      <h2>ACT 2 Mathematics - Practice Exam 1</h2>
+      <p>50 questions · 60 minutes · Immediate answer review after submission</p>
+      <div class="form-grid">
+        <label>Student name<input id="studentName" required></label>
+        <label>Student email<input id="studentEmail" type="email"></label>
+        <label>Student phone<input id="studentPhone" inputmode="tel"></label>
+      </div>
+      <button id="startBtn" class="primary">Start Exam</button>
+    </section>
+
+    <section id="examPanel" class="hidden">
+      <div class="exam-toolbar panel">
+        <div><strong id="answeredCount">0</strong>/50 answered</div>
+        <button id="submitBtn" class="danger">Submit Early</button>
+      </div>
+      <form id="examForm"></form>
+    </section>
+
+    <section id="resultPanel" class="panel hidden">
+      <h2>Exam Submitted</h2>
+      <div id="scoreBox" class="score-box"></div>
+      <p id="emailStatus"></p>
+      <div id="review"></div>
+    </section>
+  </main>
+
+  <footer>© Eng. Abdelrahman Ghoneem · 01116004434</footer>
+  <script src="/static/exam-data.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
